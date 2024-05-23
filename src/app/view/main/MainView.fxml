@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="582.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="29.0" prefWidth="862.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Arquivo">
+                  <items>
+                        <Menu mnemonicParsing="false" text="Novo">
+                          <items>
+                          <MenuItem fx:id="menuNewDictionary" mnemonicParsing="false" text="Dicionário" />
+                          </items>
+                        </Menu>
+                      <MenuItem fx:id="menuClosedSystem" mnemonicParsing="false" text="Fechar" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="Sobre" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TabPane fx:id="tabPaneMain" prefHeight="553.0" prefWidth="862.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab fx:id="tabHome" text="Inicio">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="479.0" prefWidth="862.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="862.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="396.0">
+                                             <children>
+                                                <Button fx:id="bttRegisterDictionary" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Novo">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@add.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button fx:id="bttEditDictionary" mnemonicParsing="false" prefWidth="100.0" text="Editar">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@edit.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Button fx:id="bttRemoveDictionary" mnemonicParsing="false" prefWidth="100.0" text="Remover">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@trash.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="458.0">
+                                             <children>
+                                                <Button fx:id="bttRefresh" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Atualizar">
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@refresh.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <VBox prefHeight="389.0" prefWidth="862.0">
+                                       <children>
+                                          <TableView fx:id="tableDictionary" prefHeight="390.0" prefWidth="862.0">
+                                            <columns>
+                                              <TableColumn fx:id="columnTitle" prefWidth="508.0" text="Titulo" />
+                                              <TableColumn fx:id="columnLang" prefWidth="251.0" text="Lingua" />
+                                            </columns>
+                                             <VBox.margin>
+                                                <Insets left="3.0" right="3.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets top="32.0" />
+                                 </padding>
+                              </VBox>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="tabDictionary" text="Dicionário">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="862.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="479.0" prefWidth="862.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="862.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="60.0" prefWidth="862.0">
+                                             <children>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="302.0">
+                                                   <children>
+                                                      <Label text="Buscar Dicionário:">
+                                                         <VBox.margin>
+                                                            <Insets left="1.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Button fx:id="bttSearchDictionary" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="297.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@search.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="30.0" prefWidth="862.0">
+                                             <children>
+                                                <Label fx:id="lblNameDictionary" prefHeight="30.0">
+                                                   <font>
+                                                      <Font name="Georgia" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <HBox prefHeight="379.0" prefWidth="862.0" style="-fx-border-color: #cccccc; -fx-border-width: 1px 0px 1px 0px;">
+                                       <children>
+                                          <VBox prefHeight="362.0" prefWidth="409.0" style="-fx-border-color: #cccccc; -fx-border-width: 0px 1px 0px 0px;">
+                                             <children>
+                                                <HBox prefHeight="348.0" prefWidth="403.0">
+                                                   <children>
+                                                      <VBox alignment="TOP_CENTER" prefHeight="313.0" prefWidth="43.0" spacing="15.0">
+                                                         <children>
+                                                            <Button fx:id="bttAddWord" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0">
+                                                               <VBox.margin>
+                                                                  <Insets top="33.0" />
+                                                               </VBox.margin>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@add.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <Button fx:id="bttEditWord" layoutX="14.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@edit.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic></Button>
+                                                            <Button fx:id="bttRemoveWord" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@trash.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic></Button>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="313.0" prefWidth="355.0">
+                                                         <children>
+                                                            <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="355.0">
+                                                               <children>
+                                                                  <TextField fx:id="txtSearchWords" prefHeight="24.0" prefWidth="288.0" />
+                                                                  <Button fx:id="bttSearchWords" mnemonicParsing="false" prefHeight="24.0" prefWidth="65.0">
+                                                                     <HBox.margin>
+                                                                        <Insets left="2.0" />
+                                                                     </HBox.margin>
+                                                                     <graphic>
+                                                                        <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                                                                           <image>
+                                                                              <Image url="@search.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="2.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <ListView fx:id="listViewWords" prefHeight="305.0" prefWidth="355.0" />
+                                                            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="425.0" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets right="5.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="362.0" prefWidth="453.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="35.0" prefWidth="367.0" style="-fx-border-color: #cccccc; -fx-border-width: 0px 0px 1px 0px;">
+                                                   <children>
+                                                      <Label text="Info">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="25.0">
+                                                   <children>
+                                                      <Label fx:id="lblTranslation" text="Tradução:">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Arial Bold" size="12.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@language.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Label>
+                                                      <TextField fx:id="txtTranslationWord" editable="false" prefHeight="25.0" prefWidth="287.0" style="-fx-background-color: transparent;">
+                                                         <font>
+                                                            <Font size="12.5" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Classe Gramatical:">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="txtClassGramaticWord" editable="false" prefHeight="25.0" prefWidth="254.0" style="-fx-background-color: transparent;" />
+                                                   </children>
+                                                </HBox>
+                                                <VBox prefHeight="150.0" prefWidth="358.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="358.0">
+                                                         <children>
+                                                            <Label text="Significado:">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <TextArea fx:id="txtSignificationWord" editable="false" prefHeight="120.0" prefWidth="358.0" style="-fx-background-color: transparent;">
+                                                         <VBox.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </VBox.margin>
+                                                      </TextArea>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <VBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="862.0">
+                                       <children>
+                                          <Button fx:id="bttSaveDictionary" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Salvar">
+                                             <VBox.margin>
+                                                <Insets right="15.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
