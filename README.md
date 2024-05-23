@@ -1,7 +1,7 @@
 ## Meu Dicionário Tradutor
 
 -  "Meu Dicionário Tradutor" consiste em uma aplicação para gravar palavras de um determinado idioma na medida em que forem sendo traduzidas e conhecidas
-pelos usuarios, oferecendo um lugar para facil acesso, consultadas e edições.
+pelos usuarios, oferecendo um lugar para facil acesso, consultas e edições.
 
 #### Como usar
 
