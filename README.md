@@ -16,13 +16,15 @@ pelos usuarios, oferecendo um lugar para facil acesso, consultas e edições.
 
 - Java 17, JavaFX 17, JMetro, Scene Builder, Maven, SQLiTE
 
-#### Para Desenvolvedores
-
 - Para rodar a aplicação:
   - Baixe o repositorio git;
   - Execute o comando maven: clean package (seja através do seu ide preferencial, ou pelo proprio maven);
   - Execute a aplicação atraves da classe principal Launch;
   - Se necesssário configure o Build Path com o JDK 17, não sei dizer o comportamento da aplicação em outras versões do Java, seja superiores ou inferiores;
+
+#### Modelagem da Base de Dados:
+
+![Captura de tela 2024-05-17 144357](https://github.com/franksilva2210/my-dictionary/assets/42458760/eaa2ba61-76b9-43cf-9373-a53e8e851834)
 
 
 
