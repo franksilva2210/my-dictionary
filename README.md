@@ -21,6 +21,7 @@ pelos usuarios, oferecendo um lugar para facil acesso, consultas e edições.
   - Execute o comando maven: clean package (seja através do seu ide preferencial, ou pelo proprio maven);
   - Execute a aplicação atraves da classe principal Launch;
   - Se necesssário configure o Build Path com o JDK 17, não sei dizer o comportamento da aplicação em outras versões do Java, seja superiores ou inferiores;
+  - O SDK JavaFX é por responsabilidade do maven, então voce não precisa se preocupar com isso;
 
 #### Modelagem da Base de Dados:
 
