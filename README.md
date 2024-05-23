@@ -9,5 +9,9 @@ pelos usuarios, oferecendo um lugar para facil acesso, consultadas e edições.
 
 - Um exemplo de uso:
 ![Captura de tela 2024-05-22 232633](https://github.com/franksilva2210/my-dictionary/assets/42458760/a194aa46-4a4f-4666-8dc5-a86cfc978eaa)
+![Captura de tela 2024-05-22 232810](https://github.com/franksilva2210/my-dictionary/assets/42458760/1d08d3a3-3ada-460a-829c-4736af451d20)
+
+
+
 
 
