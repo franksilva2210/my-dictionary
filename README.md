@@ -5,6 +5,7 @@ pelos usuarios, oferecendo um lugar para facil acesso, consultas e edições.
 
 #### Como usar
 
+- Você pode baixar um instalador da aplicação atraves de: https://drive.google.com/file/d/1RzJ1mxXxuILr_LL1Opb7l09vqizt2aQ1/view?usp=sharing
 - Para usar é muito simples, basta cadastrar um dicionário e a partir dele, inserir as palavras conforme o desejado.
 
 - Um exemplo de uso:
